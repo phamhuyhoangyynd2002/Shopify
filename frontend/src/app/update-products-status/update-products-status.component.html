@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="row">
+    <div class="header col-12">
+      <div class="logo col-4">
+        <img class="logo-image" src="../assets/img/logo.png" alt="">
+      </div>
+      <div class="col-4" style="text-align: center;">
+        <h2> Activities and Schedules</h2>
+      </div>
+      <div class="authentication col-4" >
+        <img class="logo-image" src="../assets/img/logo-shopify.png" alt="">
+        <!-- <button type="button" class="btn btn-success">Sign In</button>
+        <button type="button" class="btn btn-light">Sign Up</button> -->
+      </div>
+    </div> 
+  </div>
+  <!--
+    <table class="table"  style="border: 1px solid black; text-align: center;">
+    <thead>
+      <tr >
+        <th scope="col">id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Vendor</th>
+        <th scope="col">Created at</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products" >
+        <th scope="row">{{ product.id }}</th>
+        <td>{{ product.title }}</td>
+        <td>{{ product.vendor }}</td>
+        <td>{{ product.created_at }}</td>
+        <td><button class="btn btn-success" (click)="schedule(product.id, product.title, product.handle)">Active/Schedule</button></td>
+      </tr>
+    </tbody>
+  </table>
+  -->
+  
+  <table class="table" style="border: 1px solid black; text-align: center;">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Vendor</th>
+        <th scope="col">Created at</th>
+        <th scope="col">Status</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of listProducts">
+        <th scope="row">{{ product.id }}</th>
+        <td>{{ product.title }}</td>
+        <td>{{ product.vendor }}</td>
+        <td>{{ product.created_at }}</td>
+        <td><button (click)="updateProductsStatus(product.id, product.title, product.handle)">Active</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>Lịch sử</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Schedule</th>
+        <th scope="col">Schedule</th>
+        <th scope="col">Xóa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of listProductsStatusUpdateHistory">
+        <th scope="row" class="product_id">{{ product.id }}</th>
+        <td>{{ product.title }}</td>
+        <td><button (click)="schedule(product.id, product.time)" class="product_Schedule" *ngIf="!product.emailed">Schedule</button></td>
+        <td><input type="number" class="product_Schedule_time" [(ngModel)]="product.time" [ngModelOptions]="{standalone: true}" ></td>
+        <!--<td><input type="number" class="product_Schedule_time hidden" [(ngModel)]="product.time" [ngModelOptions]="{standalone: true}" ></td>--> 
+        <td><button (click)="deleteProductStatusUpdateHistory(product.id)" *ngIf="!product.emailed">Xóa</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -1,0 +1,433 @@
+<div class="container">
+  <div class="row ">
+    <div class="header col-12">
+      <div class="logo col-4">
+        <img class="logo-image" src="../assets/img/logo.png" alt="">
+      </div>
+      <div class="col-4" style="text-align: center;">
+        <h2>Form add product to Shopify </h2>
+      </div>
+      <div class="authentication col-4" >
+        <img class="logo-image" src="../assets/img/logo-shopify.png" alt="">
+        <!-- <button type="button" class="btn btn-success">Sign In</button>
+        <button type="button" class="btn btn-light">Sign Up</button> -->
+      </div>
+    </div>
+    <form action="" name="myForm" novalidate class="col-12 form-padd">
+      <div class="form col-sm-12 col-lg-7">
+        <div class="product">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+            <div class="title" style="margin-bottom: 12px;">
+              <h5>Product</h5>
+            </div>
+            <!-- Title -->
+            <div class="col-12 mb-3 input-group">
+              <label for="title" class="form-label">
+                Title <span class="text-danger" style="margin-right: 2px;">*</span>
+              </label>
+              <input type="text" class="form-control  product" aria-describedby="basic-addon1" name="title" id="title"
+                placeholder="Product Title" required [(ngModel)]="title" [ngModelOptions]="{standalone: true}">
+              <div class="valid-feedback">Title can be blank</div>
+              <div class="invalid-feedback">Title can’t be blank</div>
+            </div>
+            <!-- Description -->
+            <div class="col-12 mb-3 input-group">
+              <label for="body_html" class="form-label">
+                Description
+              </label>
+              <textarea name="body_html" id="" cols="30" rows="12" class="form-control product" [(ngModel)]="body_html"
+                [ngModelOptions]="{standalone: true}">
+                                </textarea>
+            </div>
+            <!-- Vendor -->
+            <div class="respon col-lg-4 col-sm-12 mb-3">
+              <label for="vendor" class="form-label">
+                Vendor <span class="text-danger">*</span>
+              </label>
+              <input type="text" class="form-control product" name="vendor" id="vendor" placeholder="Vendor" required
+                [(ngModel)]="vendor" [ngModelOptions]="{standalone: true}">
+              <div class="valid-feedback">Vendor Validated</div>
+              <div class="invalid-feedback">Please Enter Vendor</div>
+            </div>
+            <!-- Product Type -->
+            <div class="respon col-lg-4 col-sm-12 mb-3">
+              <label for="product_type" class="form-label">
+                Product Type
+              </label>
+              <input type="text" class="form-control product" name="product_type" id="product_type"
+                placeholder="Category" required [(ngModel)]="product_type" [ngModelOptions]="{standalone: true}">
+              <div class="valid-feedback">Category Validated</div>
+              <div class="invalid-feedback">Please Enter Category</div>
+            </div>
+            <!-- Status -->
+            <div class="respon col-lg-4 col-sm-12 mb-3 ">
+              <label for="status" class="form-label">
+                Status
+              </label>
+              <select class="form-select" name="status" aria-label="Default select example" [(ngModel)]="status"
+                [ngModelOptions]="{standalone: true}">
+                <option selected value="draft">Draft</option>
+              </select>
+            </div>
+            <!-- Images -->
+            <div class="col-12 mb-3 input-group">
+              <label for="body_html" class="form-label">
+                Images Link
+              </label>
+              <textarea name="images" id="" cols="30" rows="5" class="form-control product" [(ngModel)]="images"
+                [ngModelOptions]="{standalone: true}">
+                                </textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- MetaField -->
+        <div class="metafields">
+          <div class="col">
+            <h5>MetaFields</h5>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            <div class="col-lg-6 mb-3">
+              <label for="description" class="form-label">
+                Email
+              </label>
+              <input type="text" class="form-control" name="description" id="description" placeholder="a@gmail.com"
+                [(ngModel)]="metaFields_Email" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="col-lg-6 mb-3">
+              <label for="description" class="form-label">
+                Color ( List )
+              </label>
+              <input type="text" class="form-control" name="description" id="description" placeholder="Red, Black, ..."
+                [(ngModel)]="metaFields_Color" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3">
+              <label for="owner_resource" class="form-label">
+                Size
+              </label>
+              <input type="text" class="form-control" name="owner_resource" id="owner_resource" placeholder="Size"
+                [(ngModel)]="metaFields_Size" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3">
+              <label for="type" class="form-label">
+                Length
+              </label>
+              <input type="text" class="form-control" name="type" id="type" placeholder="Length"
+                [(ngModel)]="metaFields_Length" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3">
+              <label for="admin_graphql_api_id" class="form-label">
+                Weight
+              </label>
+              <input type="text" class="form-control" name="admin_graphql_api_id" id="admin_graphql_api_id"
+                placeholder="Weight" [(ngModel)]="metaFields_Weight" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3">
+              <label for="owner_resource" class="form-label">
+                Capacity
+              </label>
+              <input type="text" class="form-control" name="owner_resource" id="owner_resource" placeholder="Capacity"
+                [(ngModel)]="metaFields_Capacity" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3">
+              <label for="type" class="form-label">
+                Material
+              </label>
+              <input type="text" class="form-control" name="type" id="type" placeholder="Material "
+                [(ngModel)]="metaFields_Material" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-3">
+              <label for="admin_graphql_api_id" class="form-label">
+                Country of origin
+              </label>
+                    <input type="text" class="form-control" name="admin_graphql_api_id" id="admin_graphql_api_id"
+                  placeholder="Country of origin" [(ngModel)]="metaFields_Country_of_origin"
+                  [ngModelOptions]="{standalone: true}">
+            </div>
+          </div>
+        </div>
+
+        <div class="buttonsr">
+          <div>
+            <button id="resetBtn" class="btn btn-danger resetBtn" type="reset">Reset</button>
+          </div>
+          <div>
+            <button id="submitBtn" class="btn btn-success submitBtn" type="submit" (click)="post()">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-sm-12">
+
+        <div id="mini-form-1" class="col-12 mini-form form-options hidden">
+          <div class="title mb-3 mt-2">
+            <h5>Option 1</h5>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-4">
+            <!-- Sku -->
+            <div class="col-lg-12 col-sm-12 form-control-input-sku mb-3">
+              <div class="mb-3 row">
+                <label for="Sku" class="col-sm-2 col-form-label">Sku</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputSku" name="sku" id="sku" [(ngModel)]="sku_First"
+                    [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+            </div>
+            <!-- Price -->
+            <div class="col-lg-6 col-sm-6 form-control-input mb-3">
+              <div class="mb-3 row">
+                <label for="" class="col-sm-5 col-form-label">Price</label>
+                <div class="col-sm-7" style="display:flex;">
+                  <input type="text" class="form-control col-sm-7" id="price" style="width: 71%; margin-right: 4px;"
+                    [(ngModel)]="price_First" [ngModelOptions]="{standalone: true}">
+                  <span class="input-group-text" style="width: 25%" id="inputGroup-sizing-default">$</span>
+                </div>
+              </div>
+            </div>
+            <!-- Weight -->
+            <div class="col-lg-6 col-sm-6 form-control-input weigh mb-3">
+              <div class="col-12 form-control-input">
+                <div class="mb-3 row">
+                  <label for="" class="col-sm-3 col-form-label">Weight</label>
+                  <div class="col-sm-9 weight">
+                    <input type="number" class="form-control form-control-1 " id="weight" name="weight"
+                      placeholder="Weight" [(ngModel)]="weight_First" [ngModelOptions]="{standalone: true}">
+                    <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon"
+                      [(ngModel)]="weight_unit_First" [ngModelOptions]="{standalone: true}"
+                      style="margin-left: 4%; width:40%;">
+
+                      <option value="kg" selected>kg</option>
+                      <option value="lb">lb</option>
+                      <option value="g">g</option>
+                      <option value="oz">oz</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Inventory Management -->
+            <div class="col-lg-6 col-sm-12 inventory-management form-control-input mb-3">
+              <div class="row">
+                <label for="inputPassword" class="col-sm-5 col-form-label" style="margin-top: -11px;">Inventory
+                  Management</label>
+                <div class="col-sm-7">
+                  <select class="col-4 form-select" name="status" aria-label="Default select example"
+                    [(ngModel)]="inventory_management_First" [ngModelOptions]="{standalone: true}">
+                    <option value="shopify" selected>shopify</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Quantity -->
+            <div class="col-lg-6 col-sm-12 form-control-input mb-3">
+              <div class="row">
+                <label for="inputPassword" class="col-sm-3 col-form-label">Quantity</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" name="inventory_quantity" id="inventory_quantity"
+                    [(ngModel)]="inventory_quantity_First" [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-lg-12 col-sm-12 form-control-input image-link mb-3">
+              <label for="staticImageLink" class="col-sm-2 col-form-label">Image Link:</label>
+              <div class="col-sm-10">
+                <textarea name="images_First" id="" cols="30" rows="2" class="form-control" [(ngModel)]="images_First"
+                  [ngModelOptions]="{standalone: true}" placeholder="One image">
+                        </textarea>
+              </div>
+            </div>
+          </div>
+          <button (click)="removeDiv1()" id="btn-remove1" type="button" class="btn btn-danger remove-mini-form-1">Delete
+            Option</button>
+        </div>
+
+        <div id="mini-form-2" class="col-12 mini-form form-options hidden">
+          <div class="title mb-3 mt-2">
+            <h5>Option 2</h5>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-4">
+            <!-- Sku -->
+            <div class="col-lg-12 col-sm-12 form-control-input-sku mb-3">
+              <div class="mb-3 row">
+                <label for="Sku" class="col-sm-2 col-form-label">Sku</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputSku" name="sku" id="sku" [(ngModel)]="sku_Second"
+                    [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+            </div>
+            <!-- Price -->
+            <div class="col-lg-6 col-sm-6 form-control-input mb-3">
+              <div class="mb-3 row">
+                <label for="" class="col-sm-5 col-form-label">Price</label>
+                <div class="col-sm-7" style="display:flex ;">
+                  <input type="text" class="form-control col-sm-7" id="price" style="width: 71%; margin-right: 4px;"
+                    [(ngModel)]="price_Second" [ngModelOptions]="{standalone: true}">
+                  <span class="input-group-text" style="width: 25%" id="inputGroup-sizing-default">$</span>
+                </div>
+              </div>
+            </div>
+            <!-- Weight -->
+            <div class="col-lg-6 col-sm-6 form-control-input weigh mb-3">
+              <div class="col-12 form-control-input">
+                <div class="mb-3 row">
+                  <label for="" class="col-sm-3 col-form-label">Weight</label>
+                  <div class="col-sm-9 weight">
+                    <input type="number" class="form-control form-control-1 " id="weight" name="weight"
+                      placeholder="Weight" [(ngModel)]="weight_Second" [ngModelOptions]="{standalone: true}">
+                    <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon"
+                      [(ngModel)]="weight_unit_Second" [ngModelOptions]="{standalone: true}"
+                      style="margin-left: 4%; width:40%;">
+
+                      <option value="kg" selected>kg</option>
+                      <option value="lb">lb</option>
+                      <option value="g">g</option>
+                      <option value="oz">oz</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Inventory Management -->
+            <div class="col-lg-6 col-sm-12 inventory-management form-control-input mb-3">
+              <div class="row">
+                <label for="inputPassword" class="col-sm-5 col-form-label" style="margin-top: -10px;">Inventory
+                  Management</label>
+                <div class="col-sm-7">
+                  <select class="col-4 form-select" name="status" aria-label="Default select example"
+                    [(ngModel)]="inventory_management_Second" [ngModelOptions]="{standalone: true}">
+                    <option value="shopify" selected>shopify</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Quantity -->
+            <div class="col-lg-6 col-sm-12 form-control-input mb-3">
+              <div class="row">
+                <label for="inputPassword" class="col-sm-3 col-form-label">Quantity</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" name="inventory_quantity" id="inventory_quantity"
+                    [(ngModel)]="inventory_quantity_Second" [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-lg-12 col-sm-12 form-control-input image-link mb-3">
+              <label for="staticImageLink" class="col-sm-2 col-form-label">Image Link:</label>
+              <div class="col-sm-10">
+                <textarea name="images_Second" id="" cols="30" rows="2" class="form-control" [(ngModel)]="images_Second"
+                  [ngModelOptions]="{standalone: true}" placeholder="One image">
+                        </textarea>
+              </div>
+            </div>
+          </div>
+          <button (click)="removeDiv2()" id="btn-remove1" type="button" class="btn btn-danger remove-mini-form-1">Delete
+            Option</button>
+        </div>
+
+        <div id="mini-form-3" class="col-12 mini-form form-options hidden">
+          <div class="title mb-3 mt-2">
+            <h5>Option 3</h5>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-4">
+            <!-- Sku -->
+            <div class="col-lg-12 col-sm-12 form-control-input-sku mb-3">
+              <div class="mb-3 row">
+                <label for="Sku" class="col-sm-2 col-form-label">Sku</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputSku" name="sku" id="sku" [(ngModel)]="sku_Third"
+                    [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+            </div>
+            <!-- Price -->
+            <div class="col-lg-6 col-sm-6 form-control-input mb-3">
+              <div class="mb-3 row">
+                <label for="" class="col-sm-5 col-form-label">Price</label>
+                <div class="col-sm-7" style="display:flex ;">
+                  <input type="text" class="form-control col-sm-7" id="price" style="width: 71%; margin-right: 4px;"
+                    [(ngModel)]="price_Third" [ngModelOptions]="{standalone: true}">
+                  <span class="input-group-text" style="width: 25%" id="inputGroup-sizing-default">$</span>
+                </div>
+              </div>
+            </div>
+            <!-- Weight -->
+            <div class="col-lg-6 col-sm-6 form-control-input weigh mb-3">
+              <div class="col-12 form-control-input">
+                <div class="mb-3 row">
+                  <label for="" class="col-sm-3 col-form-label">Weight</label>
+                  <div class="col-sm-9 weight">
+                    <input type="number" class="form-control form-control-1 " id="weight" name="weight"
+                      placeholder="Weight" [(ngModel)]="weight_Third" [ngModelOptions]="{standalone: true}">
+                    <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon"
+                      [(ngModel)]="weight_unit_Third" [ngModelOptions]="{standalone: true}"
+                      style="margin-left: 4%; width:40%;">
+
+                      <option value="kg" selected>kg</option>
+                      <option value="lb">lb</option>
+                      <option value="g">g</option>
+                      <option value="oz">oz</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Inventory Management -->
+            <div class="col-lg-6 col-sm-12 inventory-management form-control-input mb-3">
+              <div class="row">
+                <label for="inputPassword" class="col-sm-5 col-form-label" style="margin-top: -10px;">Inventory
+                  Management</label>
+                <div class="col-sm-7">
+                  <select class="col-4 form-select" name="status" aria-label="Default select example"
+                    [(ngModel)]="inventory_management_Third" [ngModelOptions]="{standalone: true}">
+                    <option value="shopify" selected>shopify</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Quantity -->
+            <div class="col-lg-6 col-sm-12 form-control-input mb-3">
+              <div class="row">
+                <label for="inputPassword" class="col-sm-3 col-form-label">Quantity</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" name="inventory_quantity" id="inventory_quantity"
+                    [(ngModel)]="inventory_quantity_Third" [ngModelOptions]="{standalone: true}">
+                </div>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-lg-12 col-sm-12 form-control-input image-link mb-3">
+              <label for="staticImageLink" class="col-sm-2 col-form-label">Image Link:</label>
+              <div class="col-sm-10">
+                <textarea name="images_Third" id="" cols="30" rows="2" class="form-control" [(ngModel)]="images_Third"
+                  [ngModelOptions]="{standalone: true}" placeholder="One image">
+                        </textarea>
+              </div>
+            </div>
+          </div>
+          <button (click)="removeDiv3()" id="btn-remove1" type="button" class="btn btn-danger remove-mini-form-1">
+            Delete Option
+          </button>
+        </div>
+        
+        <button id="btn-add-an-option" type="button" class="btn btn-success btn-add-an-option form-options"(click)="addOption()"> 
+          Add an option
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.7)" size="default" type="ball-spin-clockwise">
+  <div class="loader">
+    <i class="fa fa-spinner fa-spin"></i>
+  </div>
+  <h3 style="color: white">Please Wait. </h3>
+</ngx-spinner>

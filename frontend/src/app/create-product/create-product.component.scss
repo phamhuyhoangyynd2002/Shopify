@@ -1,0 +1,119 @@
+.form {
+    border-right: 1px solid black;
+    flex: 0 0 auto; 
+}
+.container{
+    font-family: 'Roboto';
+    font-size: 13px;
+}
+
+form {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.weight{
+  display: flex;
+}
+
+.price{
+  display: flex;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.product {
+    width: 95%;
+}
+
+.metafields {
+    border-top: 1px solid black;
+    padding-top: 3%;
+    width: 95%;
+}
+
+.buttonsr{
+    margin-top: 5px;
+    width: 90%;
+}
+.inventory-management {
+    margin-bottom: 5%;
+}
+
+.btn {
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.mini-form-1 {
+    border-bottom: 1px solid black;
+    --bs-gutter-y: -1rem;
+}
+
+.form-options {
+    display: block;
+    width: 95%;
+    margin-left: 5%;
+}
+
+.hidden {
+    display: none;
+}
+
+.submitBtn {
+    width: 40%;
+    position: relative;
+    margin-top: -2px;
+    left: 60%;
+}
+.resetBtn{
+    width: 40%;
+    position: relative;
+    left: 60%;
+}
+.image-link {
+    display: inline-flex;
+}
+
+.check {
+    display: inline;
+}
+
+@media (max-width: 1023px) {
+    .image-link
+     {
+        margin-top: 5%;
+    }
+}
+
+.header{
+  display: contents;
+  margin-top: 20px;
+}
+
+.authentication{
+  display: inline-flex;
+  padding-left: 20%;
+}
+
+.logo-image{
+    width: 146px;
+    height: 45px;
+//   width: 40%;
+}
+
+.form-control-1{
+  width: 70%;
+}
+
+.form-padd{
+    margin-top: 30px;
+    // border-top: 2px solid black;
+}
+.header-2{
+    margin-top: 30px;
+}
